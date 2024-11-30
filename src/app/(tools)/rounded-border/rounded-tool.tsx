@@ -98,7 +98,7 @@ const ImageRenderer = ({
   }, [imageContent, radius]);
 
   return (
-    <div ref={containerRef} className="w-[400px] sm:w-[500px]">
+    <div ref={containerRef} className="w-[400px] sm:w-[500px] relative">
       <div
         className="absolute inset-0"
         style={{ backgroundColor: background, borderRadius: 0 }}
@@ -183,8 +183,8 @@ function RoundedToolCore(props: { fileUploaderProps: FileUploaderResult }) {
   }
 
   return (
-    <div className="mx-auto flex max-w-2xl flex-col items-center justify-center gap-6 md:w-fit md:flex-row md:gap-12">
-      <div className="flex w-full flex-col items-center gap-4 rounded-xl">
+    <div className="mx-auto flex max-w-2xl flex-col items-center justify-center gap-6 md:w-fit md:flex-row md:gap-12 pt-16 sm:pt-0">
+      <div className="flex flex-col items-center gap-4 rounded-xl">
         <ImageRenderer
           imageContent={imageContent}
           radius={radius}
